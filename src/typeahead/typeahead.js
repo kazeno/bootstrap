@@ -453,7 +453,7 @@ angular.module('ui.bootstrap.typeahead', ['ui.bootstrap.debounce', 'ui.bootstrap
         if (!$rootScope.$$phase) {
           scope.$digest();
         }
-      } else if (reopenOnClick && element[0] === evt.target && element.val().length) {
+      } else if (reopenOnClick && element[0] === evt.target && modelCtrl.$viewValue.length) {
         element.focus();
         hasFocus = true;
         getMatchesAsync(modelCtrl.$viewValue, evt);
